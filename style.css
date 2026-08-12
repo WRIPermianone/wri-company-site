@@ -265,9 +265,7 @@ p { color: var(--color-text-muted); font-size: var(--text-base); }
 }
 .hero-video {
   z-index: 1;
-  object-position: center 52%;
-  transform: translateX(10%) scale(1.12);
-  transform-origin: center;
+  object-position: center;
 }
 .hero-fallback {
   z-index: 0;
@@ -278,15 +276,16 @@ p { color: var(--color-text-muted); font-size: var(--text-base); }
   inset: 0;
   z-index: 2;
   background:
-    linear-gradient(180deg, rgba(13, 11, 7, 0.3) 0%, rgba(13, 11, 7, 0.12) 42%, rgba(13, 11, 7, 0.55) 84%, var(--color-bg) 100%),
-    linear-gradient(90deg, rgba(13, 11, 7, 0.58) 0%, rgba(13, 11, 7, 0.22) 55%, rgba(13, 11, 7, 0.03) 100%);
+    linear-gradient(180deg, rgba(13, 11, 7, 0.24) 0%, rgba(13, 11, 7, 0.08) 42%, rgba(13, 11, 7, 0.48) 84%, var(--color-bg) 100%),
+    linear-gradient(90deg, rgba(13, 11, 7, 0.52) 0%, rgba(13, 11, 7, 0.16) 52%, rgba(13, 11, 7, 0.02) 100%);
 }
 .hero-inner { max-width: var(--content-wide); }
 .hero-inner h1 {
-  max-width: 620px;
+  max-width: 540px;
+  font-size: clamp(2.75rem, 4.8vw, 4.5rem);
   margin-bottom: var(--space-6);
 }
-.hero .subhead { font-size: var(--text-lg); line-height: 1.55; color: #d6d1c4; max-width: 48ch; }
+.hero .subhead { font-size: var(--text-lg); line-height: 1.55; color: #d6d1c4; max-width: 43ch; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-10); }
 .hero-note {
   margin-top: var(--space-8);
@@ -304,7 +303,6 @@ p { color: var(--color-text-muted); font-size: var(--text-base); }
 }
 
 @media (max-width: 700px) {
-  .hero-video { transform: translateX(14%) scale(1.25); }
   .hero-inner h1,
   .hero .subhead { max-width: 100%; }
 }
