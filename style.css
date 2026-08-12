@@ -279,8 +279,11 @@ p { color: var(--color-text-muted); font-size: var(--text-base); }
     linear-gradient(180deg, rgba(13, 11, 7, 0.38) 0%, rgba(13, 11, 7, 0.18) 42%, rgba(13, 11, 7, 0.62) 84%, var(--color-bg) 100%),
     linear-gradient(90deg, rgba(13, 11, 7, 0.68) 0%, rgba(13, 11, 7, 0.32) 55%, rgba(13, 11, 7, 0.06) 100%);
 }
-.hero-inner { max-width: 900px; }
-.hero-inner h1 { margin-bottom: var(--space-6); }
+.hero-inner { max-width: var(--content-wide); }
+.hero-inner h1 {
+  max-width: 800px;
+  margin-bottom: var(--space-6);
+}
 .hero .subhead { font-size: var(--text-lg); line-height: 1.55; color: #d6d1c4; max-width: 62ch; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-10); }
 .hero-note {
