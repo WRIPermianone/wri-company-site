@@ -276,8 +276,8 @@ p { color: var(--color-text-muted); font-size: var(--text-base); }
   inset: 0;
   z-index: 2;
   background:
-    linear-gradient(180deg, rgba(13, 11, 7, 0.48) 0%, rgba(13, 11, 7, 0.28) 42%, rgba(13, 11, 7, 0.72) 84%, var(--color-bg) 100%),
-    linear-gradient(90deg, rgba(13, 11, 7, 0.76) 0%, rgba(13, 11, 7, 0.42) 55%, rgba(13, 11, 7, 0.12) 100%);
+    linear-gradient(180deg, rgba(13, 11, 7, 0.38) 0%, rgba(13, 11, 7, 0.18) 42%, rgba(13, 11, 7, 0.62) 84%, var(--color-bg) 100%),
+    linear-gradient(90deg, rgba(13, 11, 7, 0.68) 0%, rgba(13, 11, 7, 0.32) 55%, rgba(13, 11, 7, 0.06) 100%);
 }
 .hero-inner { max-width: 900px; }
 .hero-inner h1 { margin-bottom: var(--space-6); }
