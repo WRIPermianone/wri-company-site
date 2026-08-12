@@ -50,7 +50,25 @@
   <!-- ============================== HERO ============================== -->
   <section class="hero" id="top">
     <div class="hero-media" aria-hidden="true">
-      <img src="./assets/field-tank-battery.jpg" alt="" fetchpriority="high" width="1024" height="1024" />
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="./assets/pipeline-sunset-poster.jpg"
+      >
+        <source src="./assets/pipeline-sunset-hero.mp4" type="video/mp4" />
+      </video>
+      <img
+        class="hero-fallback"
+        src="./assets/field-tank-battery.jpg"
+        alt=""
+        fetchpriority="high"
+        width="1024"
+        height="1024"
+      />
       <div class="hero-scrim"></div>
     </div>
     <div class="container hero-inner">
