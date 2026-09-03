@@ -131,10 +131,12 @@ button, input, textarea, select {
 }
 
 .brand-logo {
-  width: 250px;
-  height: auto;
+  height: 62px;
+  width: auto;
   display: block;
-  filter: drop-shadow(0 10px 24px rgba(0,0,0,.32));
+  border-radius: 10px;
+  border: 1px solid rgba(214, 170, 90, .32);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .45);
 }
 
 .brand-copy {
@@ -1051,8 +1053,11 @@ input:focus, textarea:focus, select:focus {
 }
 
 .footer-logo {
-  width: 310px;
-  border-radius: 4px;
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(214, 170, 90, .32);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .4);
   margin-bottom: 18px;
 }
 
@@ -1225,6 +1230,23 @@ input:focus, textarea:focus, select:focus {
   object-position: center;
 }
 
+.hero--video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Soft cinematic scrim behind the hero copy — keeps text legible over the
+     video without a visible card. Fades out past the copy column so the 3D
+     emblem in the video stays visible. */
+  background: linear-gradient(90deg,
+    rgba(7, 8, 10, .88) 0%,
+    rgba(7, 8, 10, .72) 30%,
+    rgba(7, 8, 10, .42) 52%,
+    rgba(7, 8, 10, .10) 72%,
+    rgba(7, 8, 10, 0) 88%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .hero--video::after {
   content: "";
   position: absolute;
@@ -1245,15 +1267,13 @@ input:focus, textarea:focus, select:focus {
 }
 
 .hero--video .hero-card {
-  background: rgba(10, 11, 14, .68);
-  border: 1px solid rgba(214, 170, 90, .22);
-  border-radius: 22px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
   padding: 30px 38px 32px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 30px 60px -28px rgba(0, 0, 0, .8);
   display: grid;
   gap: 4px;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, .75), 0 1px 3px rgba(0, 0, 0, .9);
 }
 
 .hero--video .eyebrow { margin-bottom: 10px; }
@@ -1270,7 +1290,9 @@ input:focus, textarea:focus, select:focus {
 
 .hero--video .lead {
   font-size: clamp(15px, 1.4vw, 18px);
-  max-width: 68ch;
+  /* Narrower than the default lead so the copy column ends before the
+     centered 3D emblem in the video begins. */
+  max-width: 52ch;
   margin-top: 12px;
 }
 
@@ -1587,6 +1609,17 @@ input:focus, textarea:focus, select:focus {
   .pillar-grid { grid-template-columns: 1fr; }
 
   .hero--video .hero-card { padding: 22px 20px 24px; }
+
+  /* On mobile the copy stacks full-width over the video's centered emblem,
+     so the scrim becomes a vertical gradient behind the whole copy block. */
+  .hero--video::before {
+    background: linear-gradient(180deg,
+      rgba(7, 8, 10, .52) 0%,
+      rgba(7, 8, 10, .80) 42%,
+      rgba(7, 8, 10, .96) 100%);
+  }
+
+  .brand-logo { height: 52px; }
 
   .deal-body { padding: 24px; }
 }
