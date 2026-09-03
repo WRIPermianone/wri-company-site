@@ -1138,6 +1138,10 @@ input:focus, textarea:focus, select:focus {
 .stat-row span {
   color: var(--muted);
   font-size: 14px;
+  /* Long unbreakable tokens (e.g. the contact email) must not force the
+     grid column wider than its container on narrow viewports. */
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .timeline {
@@ -1692,6 +1696,13 @@ input:focus, textarea:focus, select:focus {
   .footer-main,
   .footer-bottom {
     width: min(100% - 28px, var(--max));
+  }
+
+  /* Stack the label above the value so long emails and phone numbers
+     read cleanly instead of wrapping inside a narrow column. */
+  .stat-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   h1 {

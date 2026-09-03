@@ -7,6 +7,13 @@
   <meta name="description" content="Contact Warrior Race Investments — start a conversation about direct energy participation, managed vehicles, or the First Time Investors Guide.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230D0B07'/%3E%3Cpath d='M16 5 L23 24 H9 Z' fill='none' stroke='%23C9A227' stroke-width='1.5'/%3E%3Cline x1='6' y1='24' x2='26' y2='24' stroke='%23C9A227' stroke-width='1.5'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="canonical" href="https://warriorraceinvestments.com/contact.html">
+  <meta property="og:url" content="https://warriorraceinvestments.com/contact.html">
+  <meta property="og:image" content="https://warriorraceinvestments.com/assets/pipeline-sunset-poster-wide.jpg">
+  <meta property="og:site_name" content="Warrior Race Investments">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact | Warrior Race Investments">
+  <meta name="twitter:image" content="https://warriorraceinvestments.com/assets/pipeline-sunset-poster-wide.jpg">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -53,6 +60,10 @@
           </div>
           <div class="stat-stack" style="margin-top:30px;">
             <div class="stat-row">
+              <strong>Office</strong>
+              <span><a href="tel:+12144275197">214-427-5197</a></span>
+            </div>
+            <div class="stat-row">
               <strong>Email</strong>
               <span><a href="mailto:info@warriorraceinvestments.com">info@warriorraceinvestments.com</a></span>
             </div>
@@ -63,7 +74,12 @@
           </div>
         </div>
 
-        <form class="form-card" data-contact-form novalidate>
+        <form class="form-card" action="https://wri-landing-page.vercel.app/api/contact" method="POST" data-contact-form novalidate>
+          <input type="hidden" name="_subject" value="WRI Website Contact Inquiry">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://warriorraceinvestments.com/thank-you.html">
+          <input type="hidden" name="_autoresponse" id="contactAutoresponse" value="">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
           <div class="form-grid">
             <div class="field">
               <label for="name">Full name</label>
@@ -74,8 +90,8 @@
               <input id="email" name="email" type="email" required autocomplete="email">
             </div>
             <div class="field">
-              <label for="phone">Phone (optional)</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" required autocomplete="tel">
             </div>
             <div class="field">
               <label for="accredited">Accredited investor status</label>
@@ -105,7 +121,7 @@
           <div class="hero-actions" style="margin-top:22px;">
             <button class="btn btn-primary" type="submit">Send Message</button>
           </div>
-          <p class="form-note">Submitting opens your email application with your message prepared — nothing is sent until you send it yourself.</p>
+          <p class="form-note">Your message goes directly to our team and you will receive an email confirmation. We typically reply within one business day.</p>
           <p class="form-status" data-form-status role="status"></p>
         </form>
       </div>
