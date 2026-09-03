@@ -94,32 +94,6 @@
         autoresponse.value = buildContactAutoresponse(first);
       }
 
-      // If no endpoint is wired yet, fall back to composing an email so no
-      // inquiry is ever lost. Remove this block once /api/contact is live.
-      if (!form.getAttribute('action')) {
-        event.preventDefault();
-        const get = (n) => {
-          const f = form.querySelector('[name="' + n + '"]');
-          return f ? f.value.trim() : '';
-        };
-        const subject = 'Investor inquiry from warriorraceinvestments.com' + (get('topic') ? ' \u2014 ' + get('topic') : '');
-        const bodyText =
-          'Name: ' + get('name') +
-          '\nEmail: ' + get('email') +
-          (get('phone') ? '\nPhone: ' + get('phone') : '') +
-          (get('accredited') ? '\nAccredited investor: ' + get('accredited') : '') +
-          '\n\n' + get('message');
-        window.location.href =
-          'mailto:info@warriorraceinvestments.com?subject=' + encodeURIComponent(subject) +
-          '&body=' + encodeURIComponent(bodyText);
-        if (status) {
-          status.textContent = 'Your email application should now be open with your message prepared. If it did not open, email info@warriorraceinvestments.com directly.';
-          status.style.background = 'var(--success)';
-          status.classList.add('is-visible');
-        }
-        return;
-      }
-
       // Let the browser POST the form. Guard against double submission.
       if (submitBtn) {
         submitBtn.disabled = true;
