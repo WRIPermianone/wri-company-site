@@ -1003,6 +1003,96 @@ input:focus, textarea:focus, select:focus {
   margin-top: 14px;
 }
 
+.form-note[data-form-error] {
+  color: #e8a1a1;
+  font-weight: 600;
+}
+
+.field-label {
+  color: #dbcdae;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.muted-note {
+  color: var(--muted-2);
+  font-weight: 500;
+}
+
+.seg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.seg label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 16px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  color: #d7cbb4;
+  font-size: 14px;
+  font-weight: 550;
+  cursor: pointer;
+  background: rgba(6, 8, 12, .6);
+  transition: border-color .18s ease, color .18s ease, background .18s ease;
+}
+
+.seg label:hover {
+  border-color: rgba(214, 170, 90, .4);
+}
+
+.seg label:has(input:checked) {
+  border-color: rgba(214, 170, 90, .6);
+  color: var(--gold-2);
+  background: rgba(214, 170, 90, .09);
+}
+
+.seg input {
+  width: auto;
+  margin: 0;
+  accent-color: var(--gold);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 16px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  color: #d7cbb4;
+  font-size: 14px;
+  font-weight: 550;
+  cursor: pointer;
+  background: rgba(6, 8, 12, .6);
+  transition: border-color .18s ease, color .18s ease, background .18s ease;
+}
+
+.chip:hover {
+  border-color: rgba(214, 170, 90, .4);
+}
+
+.chip:has(input:checked) {
+  border-color: rgba(214, 170, 90, .6);
+  color: var(--gold-2);
+  background: rgba(214, 170, 90, .09);
+}
+
+.chip input {
+  width: auto;
+  margin: 0;
+  accent-color: var(--gold);
+}
+
 .form-status {
   display: none;
   margin-top: 15px;
